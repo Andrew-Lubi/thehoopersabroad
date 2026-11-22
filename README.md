@@ -6,11 +6,14 @@ Private family travel blog for family and friends in the UK. Plain HTML with one
 
 - **Hosting:** a Cloudflare **Worker** (static assets, see `wrangler.jsonc`) called `thehoopersabroad`, in Andrew's **personal** Cloudflare account (signed in with his personal Google account). Cloudflare builds from this repository on every push to `main`. Not Netlify, and not the Lubi Cloudflare account.
 - **Domain:** thehoopersabroad.uk, registered at Cloudflare in the same personal account (registrant type: UK Individual).
-- **Privacy:** Cloudflare Access (Zero Trust Free, up to 50 readers; set up 22 Nov 2026) with email one-time-PIN login.
-  - Worker → **Access** tab: scope **All traffic** (production and previews). Policies: *Cloudflare account members* and the reusable policy **Family readers** (Zero Trust → Access controls → Policies), which lists readers by email and keeps them signed in for 1 month.
-  - The two `workers.dev` addresses are switched **off** (Worker → Domains), so thehoopersabroad.uk is the only way in.
-  - Team domain: `thehoopersabroad.cloudflareaccess.com`. Seat expiry: 6 months of inactivity.
-  - A card is on file because Cloudflare requires it for the free plan; it is only charged for usage beyond the free limits (over 50 readers).
+- **Privacy:** personal-link sign-in in `worker/index.js` (replaced Cloudflare Access on 22 Nov 2026).
+  - Each reader gets a private link, `https://thehoopersabroad.uk/join/<token>`. Opening it on any device signs that browser in; there is no code or password.
+  - Every page visit restarts a 12-week timer. A reader is signed out only after 12 weeks without a visit, and then just taps their link again.
+  - `worker/readers.js` lists readers with a SHA-256 fingerprint of each token, never the raw link. Switch someone off with `active: false` and push.
+  - A forwarded link works for whoever receives it, so if a link leaks, switch that reader off and issue a new one.
+  - Fails closed: without a valid token every page, photo and stylesheet returns the "private family blog" page. Only `robots.txt` is public.
+  - `worker/` is hidden from the website by `.assetsignore`.
+  - Cloudflare Access is switched off for this Worker. The two `workers.dev` addresses stay **off** (Worker → Domains), so thehoopersabroad.uk is the only way in.
 - **Search engines:** blocked three ways (`robots.txt`, `X-Robots-Tag` in `_headers`, and a `noindex` tag on every page), as a backstop to the lock.
 
 ## Layout
