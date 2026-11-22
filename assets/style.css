@@ -54,11 +54,19 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; line-height: 1.2; font-wei
   background: linear-gradient(180deg, #164744 0%, #1F5F5B 45%, #3F7F78 75%, #E39A6B 100%);
   background-size: cover; background-position: center;
 }
+.home-hero.has-photo {
+  min-height: clamp(340px, 62vh, 620px);
+  display: flex; flex-direction: column; justify-content: flex-start;
+  padding-top: clamp(48px, 9vh, 96px);
+  background-position: center 62%;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.5);
+}
 .home-hero.has-photo::before {
   content: ''; position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(22,71,68,0.35), rgba(22,71,68,0.75));
+  background: linear-gradient(180deg, rgba(0,0,0,0.28) 0%, rgba(0,0,0,0.06) 40%, rgba(0,0,0,0) 70%);
 }
 .home-hero > * { position: relative; }
+.home-hero.has-photo .strap { color: #fff; }
 .home-hero h1 { font-size: clamp(2.4rem, 7vw, 3.6rem); margin-bottom: 10px; }
 .home-hero .strap {
   font-family: 'Caveat', cursive; font-size: clamp(1.4rem, 4vw, 1.9rem); color: #FBE3CF;
@@ -145,6 +153,7 @@ footer .private-note { font-size: 0.85rem; max-width: 520px; margin: 0 auto; lin
 
 /* ─── SMALL SCREENS ─────────────────────────────── */
 @media (max-width: 700px) {
+  .home-hero.has-photo { background-position: 30% 62%; }
   .post-card { grid-template-columns: 1fr; }
   .post-card img { height: 220px; min-height: 0; }
   .post-card-body { padding: 20px 22px 24px; }
