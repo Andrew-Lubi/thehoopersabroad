@@ -1,0 +1,154 @@
+/* The Hoopers Abroad — shared styles for the home page and every post.
+   Private family blog. Deliberately separate in look from the Lubi website. */
+
+/* ─── COLOURS ───────────────────────────────────── */
+:root {
+  --sea:      #1F5F5B;   /* deep sea green: headings, header */
+  --sea-dk:   #164744;
+  --coral:    #D9683A;   /* warm accent: links, dates, rules */
+  --sand:     #F6EFE4;   /* page background behind cards */
+  --shell:    #FFFDF9;   /* card / article background */
+  --ink:      #2B2B2B;   /* body text */
+  --muted:    #6F6A63;   /* captions, meta */
+}
+
+/* ─── RESET ─────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Nunito Sans', system-ui, sans-serif;
+  line-height: 1.75;
+  color: var(--ink);
+  background: var(--shell);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh; display: flex; flex-direction: column;   /* keeps the footer at the bottom on short pages */
+}
+.post-list, .post { flex: 1; }
+img { max-width: 100%; display: block; }
+a { color: var(--coral); text-decoration: none; }
+a:hover { text-decoration: underline; }
+h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; line-height: 1.2; font-weight: 600; }
+
+.container       { max-width: 720px;  margin: 0 auto; padding: 0 22px; }
+.container--wide { max-width: 1000px; margin: 0 auto; padding: 0 22px; }
+
+/* ─── TOP BAR ───────────────────────────────────── */
+.topbar { background: var(--sea-dk); }
+.topbar-inner {
+  max-width: 1000px; margin: 0 auto; padding: 0 22px; height: 56px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.topbar .site-name {
+  font-family: 'Fraunces', Georgia, serif; font-size: 1.15rem; font-weight: 600;
+  color: #fff;
+}
+.topbar .site-name:hover { text-decoration: none; color: #F3C9A9; }
+.topbar .home-link {
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(255,255,255,0.75);
+}
+
+/* ─── HOME PAGE ─────────────────────────────────── */
+.home-hero {
+  position: relative; color: #fff; text-align: center;
+  padding: 96px 22px 88px;
+  background: linear-gradient(180deg, #164744 0%, #1F5F5B 45%, #3F7F78 75%, #E39A6B 100%);
+  background-size: cover; background-position: center;
+}
+.home-hero.has-photo::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(22,71,68,0.35), rgba(22,71,68,0.75));
+}
+.home-hero > * { position: relative; }
+.home-hero h1 { font-size: clamp(2.4rem, 7vw, 3.6rem); margin-bottom: 10px; }
+.home-hero .strap {
+  font-family: 'Caveat', cursive; font-size: clamp(1.4rem, 4vw, 1.9rem); color: #FBE3CF;
+}
+
+.post-list { background: var(--sand); padding: 56px 0 80px; }
+.post-list .empty {
+  text-align: center; color: var(--muted); font-size: 1.05rem; padding: 32px 0;
+}
+.post-card {
+  display: grid; grid-template-columns: 2fr 3fr;
+  background: var(--shell); border-radius: 10px; overflow: hidden;
+  box-shadow: 0 2px 14px rgba(31,95,91,0.08);
+  margin-bottom: 26px; color: inherit;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.post-card:hover { text-decoration: none; box-shadow: 0 6px 24px rgba(31,95,91,0.16); transform: translateY(-2px); }
+.post-card img { width: 100%; height: 100%; min-height: 220px; object-fit: cover; }
+.post-card-body { padding: 26px 30px; }
+.post-card-date {
+  font-size: 0.74rem; font-weight: 800; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--coral); margin-bottom: 6px;
+}
+.post-card h2 { font-size: 1.55rem; color: var(--sea); margin-bottom: 10px; }
+.post-card p { font-size: 0.98rem; color: #4a4741; margin-bottom: 12px; }
+.post-card .read-more { font-size: 0.8rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sea); }
+
+/* ─── POST PAGE ─────────────────────────────────── */
+.post-hero { position: relative; }
+.post-hero img { width: 100%; height: clamp(260px, 50vw, 560px); object-fit: cover; }
+.post-hero::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(22,71,68,0) 40%, rgba(22,71,68,0.85));
+}
+.post-hero-text {
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 1;
+  max-width: 720px; margin: 0 auto; padding: 0 22px 30px; color: #fff;
+}
+.post-hero-text .strap { font-family: 'Caveat', cursive; font-size: clamp(1.3rem, 3.5vw, 1.7rem); color: #FBE3CF; }
+.post-hero-text h1 { font-size: clamp(2.1rem, 6vw, 3rem); }
+
+.post { padding: 36px 0 72px; }
+.post .meta { font-size: 0.9rem; color: var(--muted); margin-bottom: 30px; }
+.post p, .post li { font-size: clamp(1.02rem, 1.7vw, 1.1rem); line-height: 1.85; }
+.post p { margin-bottom: 1.3em; }
+.post h2 {
+  font-size: 1.6rem; color: var(--sea);
+  margin: 2em 0 0.7em; padding-bottom: 6px; border-bottom: 3px solid var(--coral);
+}
+.post ul { padding-left: 22px; margin-bottom: 1.3em; }
+.post li { margin-bottom: 0.7em; }
+.post li::marker { color: var(--coral); }
+.post figure { margin: 28px 0; }
+.post figure img { width: 100%; border-radius: 8px; }
+.post figcaption { font-size: 0.9rem; line-height: 1.5; color: var(--muted); margin-top: 8px; }
+.post .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 28px 0; }
+.post .pair figure { margin: 0; }
+.post .pair img { height: 300px; object-fit: cover; }
+.post .pair.tall img { height: 380px; }
+.post .float-r { float: right; width: 42%; margin: 6px 0 14px 24px; }
+.post .clear { clear: both; }
+
+/* Video: YouTube embed at 16:9, fills the column width */
+.post .video { margin: 28px 0; }
+.post .video .frame { position: relative; aspect-ratio: 16 / 9; border-radius: 8px; overflow: hidden; background: #000; }
+.post .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+/* Short clips stored on the site itself */
+.post video { width: 100%; border-radius: 8px; }
+
+.post .signoff {
+  font-family: 'Caveat', cursive; font-size: 1.8rem; line-height: 1.4;
+  color: var(--sea); margin-top: 34px;
+}
+.post-nav {
+  border-top: 1px solid rgba(31,95,91,0.15); margin-top: 46px; padding-top: 22px;
+  font-size: 0.8rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+}
+.post-nav a { color: var(--sea); }
+
+/* ─── FOOTER ────────────────────────────────────── */
+footer { background: var(--sea-dk); color: rgba(255,255,255,0.7); text-align: center; padding: 40px 22px 34px; }
+footer .footer-name { font-family: 'Fraunces', Georgia, serif; font-size: 1.2rem; color: #fff; margin-bottom: 8px; }
+footer .private-note { font-size: 0.85rem; max-width: 520px; margin: 0 auto; line-height: 1.6; }
+
+/* ─── SMALL SCREENS ─────────────────────────────── */
+@media (max-width: 700px) {
+  .post-card { grid-template-columns: 1fr; }
+  .post-card img { height: 220px; min-height: 0; }
+  .post-card-body { padding: 20px 22px 24px; }
+  .post .pair { grid-template-columns: 1fr; }
+  .post .pair img, .post .pair.tall img { height: auto; max-height: 460px; }
+  .post .float-r { float: none; width: 100%; margin: 28px 0; }
+}
