@@ -4,11 +4,13 @@ Private family travel blog for family and friends in the UK. Plain HTML with one
 
 ## Where it runs
 
-- **Hosting:** Cloudflare Pages, in Andrew's **personal** Cloudflare account (signed in with his personal Google account). Not Netlify, and not the Lubi Cloudflare account.
+- **Hosting:** a Cloudflare **Worker** (static assets, see `wrangler.jsonc`) called `thehoopersabroad`, in Andrew's **personal** Cloudflare account (signed in with his personal Google account). Cloudflare builds from this repository on every push to `main`. Not Netlify, and not the Lubi Cloudflare account.
 - **Domain:** thehoopersabroad.uk, registered at Cloudflare in the same personal account (registrant type: UK Individual).
-- **Privacy:** Cloudflare Access (Zero Trust, free plan, up to 50 readers) with email one-time-PIN login. Readers are listed by email address in the Access policy.
-  - The lock must cover **thehoopersabroad.uk**, the **\*.pages.dev** address and **preview deployments**. Previews are otherwise public.
-  - Seat expiry: 6 months, so readers who stop visiting free up their seat automatically.
+- **Privacy:** Cloudflare Access (Zero Trust Free, up to 50 readers; set up 22 Nov 2026) with email one-time-PIN login.
+  - Worker → **Access** tab: scope **All traffic** (production and previews). Policies: *Cloudflare account members* and the reusable policy **Family readers** (Zero Trust → Access controls → Policies), which lists readers by email and keeps them signed in for 1 month.
+  - The two `workers.dev` addresses are switched **off** (Worker → Domains), so thehoopersabroad.uk is the only way in.
+  - Team domain: `thehoopersabroad.cloudflareaccess.com`. Seat expiry: 6 months of inactivity.
+  - A card is on file because Cloudflare requires it for the free plan; it is only charged for usage beyond the free limits (over 50 readers).
 - **Search engines:** blocked three ways (`robots.txt`, `X-Robots-Tag` in `_headers`, and a `noindex` tag on every page), as a backstop to the lock.
 
 ## Layout
