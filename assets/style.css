@@ -67,6 +67,14 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; line-height: 1.2; font-wei
 }
 .home-hero > * { position: relative; }
 .home-hero.has-photo .strap { color: #fff; }
+.home-hero.has-photo h1 { margin: 0 0 4px; line-height: 0; }
+.home-hero .kicker {
+  font-family: 'Caveat', cursive; font-size: clamp(1.4rem, 3.6vw, 2rem); color: #fff; margin-bottom: 6px;
+}
+.home-hero .title-img {
+  width: min(860px, 90vw); height: auto; margin: 0 auto;
+  filter: drop-shadow(0 2px 10px rgba(0,0,0,0.45));
+}
 .home-hero h1 { font-size: clamp(2.4rem, 7vw, 3.6rem); margin-bottom: 10px; }
 .home-hero .strap {
   font-family: 'Caveat', cursive; font-size: clamp(1.4rem, 4vw, 1.9rem); color: #FBE3CF;
