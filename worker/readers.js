@@ -13,4 +13,10 @@ export const READERS = [
   { id: "ciara-ashton", name: "Ciara Ashton", email: "ciara.ashton@swaythlingprimary.org", tokenHash: "19576537a76dada3298c4c01e9d97323c773838834bdffe6abd701662ad61067", active: true },
   { id: "ashley-kearse", name: "Ashley Kearse", email: "ashley.kearse@swaythlingprimary.org", tokenHash: "ef375f3940431607d161decf9d807db854699474afdee3617f2b4f5f4097eb72", active: true },
   { id: "melissa-down", name: "Melissa Down", email: "melissa.down@swaythlingprimary.org", tokenHash: "a498a360894bd9d0d51882f29c4c01910ce7b1dcbff12425822906ef26cb9d19", active: true },
+  { id: "heidi", name: "Heidi", email: "heidiyu212@hotmail.com", tokenHash: "b2a8756aa380b0bcf2fde529ac25b36708b48151f212e2a970f0e28c42186e05", active: true },
+  { id: "matt", name: "Matt", email: "ghbmatt@gmail.com", tokenHash: "b934a6d165c685d1af8b4287af1eef7456e85afb4d44f659d7467464d77ac74a", active: true },
+  { id: "rachael", name: "Rachael", email: "ragmeaney@hotmail.com", tokenHash: "63a41691f6a7cc171826ffb3b71f759fc3287f1c8acc460c49b02097ee10178b", active: true },
+  { id: "tim-hope", name: "Tim", email: "tim.hope@btinternet.com", tokenHash: "d56618d8349c2f758777a6c7a8ee8536dce5b3cd53c20ca2cb71be81c8a5109b", active: true },
+  { id: "sophie", name: "Sophie", email: "sophiebartlett@icloud.com", tokenHash: "af0abab19eca410ba9da7b8e69fbd4f426d7ff6d84dbc65fbb55c5a5f4051ffa", active: true },
+  { id: "emma", name: "Emma", email: "emmagotts891@hotmail.co.uk", tokenHash: "6612107f28246f54ad03a8df901b8b3e3e30f501da6e4df9f538b6a3f01983cf", active: true },
 ];
