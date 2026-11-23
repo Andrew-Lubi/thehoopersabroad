@@ -35,4 +35,5 @@ export const READERS = [
   { id: "neil", name: "Neil", email: "neil_thompson@btconnect.com", tokenHash: "63556d84f0771bdcaa6eb7c1fe8168cac05a03ffcd12bf461c0cafd0eea86f76", active: true },
   { id: "jim", name: "Jim", email: "jimphi@icloud.com", tokenHash: "9bef4adc978c0f305900676c921e0d49c148d85f2f519c3aa722805748d33acc", active: true },
   { id: "mike-and-maureen", name: "Mike and Maureen", email: "mandmspillett@gmail.com", tokenHash: "c852a35cfde7eec7f5b2c93b85b2857c16f79f153487885b5f39b960665c556f", active: true },
+  { id: "henry", name: "Henry", email: "henrywai@hotmail.co.uk", tokenHash: "0914f3db8b713de38533ab687e94c8ff785d26cc3749631b66c95ef3f204db00", active: true },
 ];
