@@ -37,4 +37,6 @@ export const READERS = [
   { id: "mike-and-maureen", name: "Mike and Maureen", email: "mandmspillett@gmail.com", tokenHash: "c852a35cfde7eec7f5b2c93b85b2857c16f79f153487885b5f39b960665c556f", active: true },
   { id: "henry", name: "Henry", email: "henrywai@hotmail.co.uk", tokenHash: "0914f3db8b713de38533ab687e94c8ff785d26cc3749631b66c95ef3f204db00", active: true },
   { id: "boris", name: "Boris", email: "borisrodov@hotmail.com", tokenHash: "aff7cc515d8a322a779a9e4115d0aa146e5a3e416d3c180cc01b3e603295baff", active: true },
+  { id: "monika", name: "Monika", email: "monikasuszynska@o2.pl", tokenHash: "e8dc3ea2a5872fc2da42c73c061885871553eaddae419cce46c4a506a50fa79c", active: true },
+  { id: "irene", name: "Irene", email: "irenewai@hotmail.co.uk", tokenHash: "41bca7e72c6bb97495a113405e890e081b1b1332ed48fdfc521f3324b6255906", active: true },
 ];
