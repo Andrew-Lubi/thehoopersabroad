@@ -39,4 +39,8 @@ export const READERS = [
   { id: "boris", name: "Boris", email: "borisrodov@hotmail.com", tokenHash: "aff7cc515d8a322a779a9e4115d0aa146e5a3e416d3c180cc01b3e603295baff", active: true },
   { id: "monika", name: "Monika", email: "monikasuszynska@o2.pl", tokenHash: "e8dc3ea2a5872fc2da42c73c061885871553eaddae419cce46c4a506a50fa79c", active: true },
   { id: "irene", name: "Irene", email: "irenewai@hotmail.co.uk", tokenHash: "41bca7e72c6bb97495a113405e890e081b1b1332ed48fdfc521f3324b6255906", active: true },
+  { id: "nj-stanley", name: "N J Stanley", email: "njstanley9419@gmail.com", tokenHash: "dc226db2eaf6efdb250b5b2f444579449ff8885e96b5cff29dac02c2a54be3b3", active: true },
+  { id: "tom-mills", name: "Tom Mills", email: "tom.mills293@hotmail.co.uk", tokenHash: "4f6c2b32e13ad8d1c4c12e363a6725a9a6b8b2c814ab003b47231952d1450c92", active: true },
+  { id: "pj-mills", name: "P J Mills", email: "millspj20@gmail.com", tokenHash: "f97cad3acfa35d4c5e22255dab1c9e785da5fdd9ea23988e91bb517b781e7449", active: true },
+  { id: "mary-rose-rodov", name: "Mary Rose Rodov", email: "maryroserodov@gmail.com", tokenHash: "a815d1cadd14e4883cf8fad64449ad247382369f4473b37b428164c1cf843d3e", active: true },
 ];
