@@ -44,4 +44,5 @@ export const READERS = [
   { id: "pj-mills", name: "P J Mills", email: "millspj20@gmail.com", tokenHash: "f97cad3acfa35d4c5e22255dab1c9e785da5fdd9ea23988e91bb517b781e7449", active: true },
   { id: "mary-rose-rodov", name: "Mary Rose Rodov", email: "maryroserodov@gmail.com", tokenHash: "a815d1cadd14e4883cf8fad64449ad247382369f4473b37b428164c1cf843d3e", active: true },
   { id: "mark-stanley", name: "Mark Stanley", email: "mark.stanley253@gmail.com", tokenHash: "e0932516dae833e98fc27d174404ef0e59dcdbb5e935e03b52b751311e6d1efc", active: true },
+  { id: "bee-ladher", name: "Bee (Barbara) Ladher", email: "barbara.ladher@hotmail.co.uk", tokenHash: "5e496f81225deff77e4ff66dfc70400b04b963306fa3e114b978dc20cf4666ab", active: true },
 ];
